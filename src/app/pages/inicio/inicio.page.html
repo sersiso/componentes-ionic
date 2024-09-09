@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Componentes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item *ngFor="let c of componentes" [routerLink]="c.redirectTo" detail>
+    <ion-icon [name]="c.icon" slot="start"></ion-icon>
+    {{ c.name }}
+  </ion-item>
+</ion-content>
